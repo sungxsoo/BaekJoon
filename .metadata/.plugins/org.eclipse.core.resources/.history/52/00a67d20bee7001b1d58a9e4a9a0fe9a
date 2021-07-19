@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt();
+		
+		int[] numList = new int[N];
+		
+		for(int i =0; i<N; i++) {
+			numList[i] = sc.nextInt();
+		}
+		
+		quickSort(numList, 0, numList.length-1);
+		
+		for(int i =0; i<numList.length; i++) {
+			System.out.println(numList[i]);
+		}
+	}
+
+	public static int partition(int[] numList, int left, int right) {
+		
+		
+		
+		//ÇÇº¿À» Áß¾ÓÀ¸·Î
+		int pivot = numList[(left+right)/2];
+		
+		
+		
+		while(left < right) {
+			while((numList[left] < pivot) && (left < right)) {
+				left ++;
+			}
+			while((numList[left] > pivot) && (left < right)) {
+				right--;
+			}
+		
+			if(left < right) {
+				int temp = numList[left];
+				numList[left] = numList[right];
+				numList[right] = temp;
+			}
+		}
+		
+		return left;
+	}
+	
+	public static void quickSort(int[] numList, int left, int right) {
+		if(left < right) {
+			int newPivot = partition(numList, left, right);
+			
+			quickSort(numList, left, newPivot-1);
+			quickSort(numList, newPivot+1, right);
+		}
+		
+	}
+}

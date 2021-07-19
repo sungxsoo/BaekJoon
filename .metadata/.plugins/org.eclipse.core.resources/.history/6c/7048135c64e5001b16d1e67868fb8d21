@@ -1,0 +1,16 @@
+
+public class HanSoo {
+	public int getNum(int N) {
+		int num = 0;
+		
+		for(int i =0; i<N; i++) {
+			//i의 각자리수가 등차수열을 이루면
+			if() {
+				num++;
+			}
+			
+		}
+		
+		return num;
+	}
+}

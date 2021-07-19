@@ -1,0 +1,58 @@
+
+public class SelfNum {
+	public void findSn() {
+		
+		int n = 1;
+		while(n<10000) {
+			
+			n++;
+		}
+	
+	}
+
+	
+	public int sumAll(int n) {
+		//일의자리
+		int rst;
+		
+		if(n<10) {
+			rst = n;
+		}
+		//십의자리
+		else if(10<=n && n<100) {
+			int second = n/10;
+			int first = n - second*10;
+			rst = n + first + second;
+		}
+		//백의자리
+		else if(n<=100 && n<1000) {
+			int third = n/100;
+			int second = (n - third*100)/10;
+			int first = n - second*10;
+			rst = n + first + second + third;
+		}
+		//천의자리
+		else {
+			int fourth = n/1000;
+			int third = (n - fourth*1000)/100;
+			int second = (n - third*100)/10;
+			int first = n - second*10;
+			
+			System.out.println(second);
+			rst = n + first + second + third;
+		}
+		
+		return rst;
+		
+	}
+	public static void main(String[] args) {
+
+		SelfNum s = new SelfNum();
+		
+		
+		System.out.println(s.sumAll(1434));
+	}
+	
+	
+	
+}

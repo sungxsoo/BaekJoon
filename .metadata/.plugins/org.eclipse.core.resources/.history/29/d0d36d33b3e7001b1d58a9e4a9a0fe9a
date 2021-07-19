@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BlackJack {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		ArrayList<Integer> numList = new ArrayList<>();
+		
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		
+		for(int i =0; i<N; i++) {
+			numList.add(sc.nextInt());
+		}
+		
+		int result = findJack(numList, M);
+	}
+	
+	public int findJack(ArrayList<Integer>, int M) {
+		
+	}
+}

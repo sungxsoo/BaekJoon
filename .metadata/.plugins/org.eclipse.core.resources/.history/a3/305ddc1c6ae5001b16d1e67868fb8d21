@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Factorial {
+	public int factorial(int n) {
+		int num = 1;
+		
+		if(n>=1) {
+			num *= factorial(--n);
+			return num;
+		}
+		else {
+			return n;
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Factorial fc = new Factorial();
+		
+		fc.factorial(sc.nextInt());
+	
+	}
+}
+
+

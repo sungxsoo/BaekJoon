@@ -1,0 +1,6 @@
+
+public class Chess {
+	public int findNum(boolean[][] tileList, int N, int M) {
+		
+	}
+}

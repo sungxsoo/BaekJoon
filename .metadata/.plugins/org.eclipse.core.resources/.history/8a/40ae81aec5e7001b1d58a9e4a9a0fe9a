@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+	
+		Point[] points = new Point[N];
+		
+		for(int i =0; i<N; i++) {
+			points[i] = new Point(sc.nextInt(), sc.nextInt());
+		}
+		
+		swap(points, N);
+		
+		for(Point p : points) {
+			System.out.println(p);
+		}
+	}
+	
+	public static void swap(Point[] points, int N) {
+		for(int i= 0; i<N-1; i++) {
+			for(int j = i+1;  j<N; j++) {
+				if(points[i].x > points[j].x) {
+					Point temp;
+					temp = points[i];
+					points[i] = points[j];
+					points[j] = temp;
+				}
+				else if(points[i].x == points[j].x) {
+					if(points[i].y > points[j].y) {
+						Point temp;
+						temp = points[i];
+						points[i] = points[j];
+						points[j] = temp;
+					}
+				}
+			}
+		}
+	}
+	
+}	
+
+
+class Point{
+	int x;
+	int y;
+	public Point(int x, int y) {
+		this.x = x; this.y = y;
+	}
+	@Override
+	public String toString() {
+		return x +" "+ y;
+	}
+	
+}

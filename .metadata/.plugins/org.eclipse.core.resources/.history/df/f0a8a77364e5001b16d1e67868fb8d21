@@ -1,0 +1,31 @@
+
+public class HanSoo {
+	public int getNum(int N) {
+		int num = 0;
+		
+		for(int i =0; i<N; i++) {
+			//i의 각자리수가 등차수열을 이루면
+			if() {
+				num++;
+			}
+			
+		}
+		
+		return num;
+	}
+	
+	public boolean deungCha(int n) {
+
+		if(n<=100 && n<1000) {
+			int third = n/100;
+			int second = (n - third*100)/10;
+			int first = n - second*10- third*1000;
+			
+			return (third-second == second-first);
+		}
+		
+		else {
+			return false;
+		}
+	}
+}

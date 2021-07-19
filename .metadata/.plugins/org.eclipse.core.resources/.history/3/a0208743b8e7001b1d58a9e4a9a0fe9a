@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Chess ch = new Chess();
+		
+		
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		
+		String[][] tileList = new String[N][M]; 
+		
+		for(int i =0; i<N; i++) {
+			for(int j =0; j<M; j++) {
+				tileList[N][M] = sc.next();
+			}
+		}
+		
+		int result = ch.findNum(tileList, N, M);
+		
+		System.out.println(result);
+	}
+}

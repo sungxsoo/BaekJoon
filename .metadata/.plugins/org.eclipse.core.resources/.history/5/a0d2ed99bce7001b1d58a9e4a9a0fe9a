@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt();
+		
+		int[] numList = new int[N];
+		
+		for(int i =0; i<N; i++) {
+			numList[i] = sc.nextInt();
+		}
+		
+		quickSort(numList, 0, numList.length-1);
+	}
+
+	public static void quickSort(int[] numList, int left, int right) {
+		int pivot = 0;
+		int i = 1;
+		int j = N;
+		int temp;
+		
+		while(i<=j) {
+			
+		}
+	}
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		
+		
+	}
+	
+}	
+
+
+class Point{
+	int x;
+	int y;
+	public Point(int x, int y) {
+		this.x = x; this.y = y;
+	}
+}

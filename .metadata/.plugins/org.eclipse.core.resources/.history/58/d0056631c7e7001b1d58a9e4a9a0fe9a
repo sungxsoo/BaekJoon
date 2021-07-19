@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+	
+		int[][] arr = new int[N][2];
+		
+		for(int i =0; i<N; i++) {
+			for(int j=0; j<2; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		swap(arr, N);
+		
+	}
+	
+	public static void swap(int[][] arr, int N) {
+	
+	}
+	
+}	
+
+
+class Point{
+	int x;
+	int y;
+	public Point(int x, int y) {
+		this.x = x; this.y = y;
+	}
+	@Override
+	public String toString() {
+		return x +" "+ y;
+	}
+	
+}
